@@ -1,5 +1,24 @@
 import './Header.css'
 
+const registerOptions = (
+  <>
+    <li>
+      <a href="contact.html">Register</a>
+    </li>
+    <li>
+      <a href="shop.html">Log in</a>
+    </li>
+  </>)
+
+const logOutOptions = (
+  <>
+    <li>
+      <a href="contact.html">Log Out</a>
+    </li>
+   
+  </>)
+
+
 const Header = () => {
     return(
         <div className="top-header-area" id="sticker">
@@ -27,12 +46,9 @@ const Header = () => {
                     <li>
                       <a href="contact.html">Catalog</a>
                     </li>
-                    <li>
-                      <a href="contact.html">Register</a>
-                    </li>
-                    <li>
-                      <a href="shop.html">Sign in</a>
-                    </li>
+                   { true?registerOptions:logOutOptions
+
+                   }
                   </ul>
                 </nav>
               </div>

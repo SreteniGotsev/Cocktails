@@ -7,6 +7,15 @@
   margin-top: 40px;
 }
 
+.container-details{
+  display: flex;
+  justify-content: space-around;
+}
+
+.single-product-item{
+  position: relative;
+}
+
 .cart-banner .image-column .price-box {
   position: absolute;
   left: 15%;

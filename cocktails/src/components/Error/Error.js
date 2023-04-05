@@ -32,7 +32,7 @@ const Error = () =>{
             </div>
           </div>
         </div>
-        <div className="logo-carousel-section">
+
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -56,7 +56,6 @@ const Error = () =>{
               </div>
             </div>
           </div>
-        </div>
       </div>
     );
 

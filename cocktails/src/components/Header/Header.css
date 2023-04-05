@@ -38,41 +38,12 @@ nav.main-menu ul li a {
   color: #fff;
   font-weight: 700;
   display: block;
-  padding: 15px;
+  padding: 20px;
+  font-size: 25px;
 }
 
 nav.main-menu ul > li {
   position: relative;
-}
-
-nav.main-menu ul ul.sub-menu {
-  position: absolute;
-  background-color: #fff;
-  width: 220px;
-  padding: 15px 15px;
-  margin: 0;
-  left: 0;
-  top: 50px;
-  border-radius: 3px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-box-shadow: 0 0 20px #555555;
-  box-shadow: 0 0 20px #555555;
-}
-
-nav.main-menu ul ul.sub-menu li {
-  display: block;
-  text-align: left;
-}
-
-nav.main-menu ul ul.sub-menu li a {
-  color: #555;
-  font-weight: 600;
-  padding: 7px 10px;
-  font-size: 25px;
 }
 
 nav.main-menu ul > li:hover ul {
@@ -84,9 +55,9 @@ nav.main-menu ul li:last-child a {
   display: inline-block;
 }
 
-nav.main-menu > ul li:last-child {
+/* nav.main-menu > ul li:last-child {
   float: right;
-}
+} */
 
 .site-logo {
   float: left;
@@ -97,9 +68,6 @@ nav.main-menu > ul li:last-child {
   border-radius: 3rem;
 }
 
-ul.sub-menu li:last-child {
-  float: none !important;
-}
 
 .mean-container .mean-bar {
   background-color: transparent;
@@ -128,17 +96,6 @@ ul.sub-menu li:last-child {
   padding: 0.5em 5%;
 }
 
-.mean-container .mean-nav ul li li a {
-  padding: 0.5em 10%;
-}
-
-.mean-container .mean-nav ul li a.mean-expand {
-  font-size: 16px;
-  height: 10px;
-  line-height: 10px;
-  width: 15px;
-}
-
 .mean-container a.meanmenu-reveal {
   padding: 8px 8px 6px;
 }
@@ -161,16 +118,6 @@ nav.mean-nav > ul > li:first-child > a {
   color: #051922;
 }
 
-nav.main-menu ul ul.sub-menu li {
-  display: block;
-}
-
-nav.main-menu ul ul.sub-menu li a {
-  color: #555;
-  padding: 8px;
-  font-size: 13px;
-  font-weight: 600;
-}
 
 nav.main-menu ul li.current-list-item > a {
   color: #F28123;

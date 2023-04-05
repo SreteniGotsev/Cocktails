@@ -7,14 +7,14 @@ const Hero = ()=>{
             <div className="col-lg-9 offset-lg-2 text-center">
               <div className="hero-text">
                 <div className="hero-text-tablecell">
-                  <p className="subtitle">Fresh & Organic</p>
-                  <h1>Lift your spirits</h1>
+                  <p className="subtitle">Lift your spirits!</p>
+                  <h1>Life is too short for a bad drink!</h1>
                   <div className="hero-btns">
                     <a href="shop.html" className="boxed-btn">
-                      Fruit Collection
+                      Cocktail list
                     </a>
                     <a href="contact.html" className="bordered-btn">
-                      Contact Us
+                      Blog
                     </a>
                   </div>
                 </div>
