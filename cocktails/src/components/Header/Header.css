@@ -7,17 +7,9 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   z-index: 999;
   width: 100%;
   padding: 25px 0;
+  top:0;
 }
 
-.top-header-area.white ul.navbar-nav li.nav-item a.nav-link, .top-header-area.white ul.navbar-nav li.nav-item.active a.nav-link {
-  color: #fff;
-}
-
-ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-link {
-  color: #fff;
-  font-weight: 700;
-  margin-right: 14px;
-}
 
 a.navbar-brand img {
   max-width: 150px;
@@ -35,7 +27,7 @@ nav.main-menu ul li {
 }
 
 nav.main-menu ul li a {
-  color: #fff;
+  color:#F28123;
   font-weight: 700;
   display: block;
   padding: 20px;
@@ -104,11 +96,6 @@ nav.mean-nav > ul > li:first-child > a {
   border-top: none;
 }
 
-.header-icons a {
-  color: #fff;
-  display: inline-block;
-  padding: 10px;
-}
 
 .site-logo {
   padding: 6px 0;
@@ -124,7 +111,7 @@ nav.main-menu ul li.current-list-item > a {
 }
 
 nav.main-menu li:hover > a {
-  color: #F28123;
+  color:#fff;
 }
 
 nav.main-menu li a {
@@ -140,7 +127,7 @@ nav.main-menu li a {
 }
 
 .top-header-area .header-icons a:hover {
-  color: #F28123;
+  color: #fff;
 }
 
 .sticky-wrapper {

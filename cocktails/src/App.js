@@ -11,6 +11,7 @@ import Edit from "./components/Edit/Edit";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import CopyRight from "./components/CopyRight/CopyRight";
+import { Route, Routes } from "react-router";
 
 
 function App() {
@@ -22,34 +23,23 @@ function App() {
         </div>
       </div> */}
 
-      <Header/>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/edit" element={<Edit />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/details" element={<Details />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/error" element={<Error />} />
+      </Routes>
 
-      <Hero/>
-
-      <Login/>
-
-      <Register/> 
-      
-      <Create/>
-
-      <Edit/>
-
-      <Catalog/>
-
-      <Details/>
-
-      <About/>
-
-      <Sponsors/>
-
-      <Error/>
-
-      <Footer/>
-
-      <CopyRight/> 
-
+      <Footer />
+      <CopyRight />
     </div>
-
   );
 }
 

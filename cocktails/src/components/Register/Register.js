@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Register.css'
 
 const Register = () =>{
@@ -15,7 +16,7 @@ const Register = () =>{
             <div className="signup">
               <span className="signup">
                 Already have an account?
-                <label for="check">Login</label>
+                <Link to="/login">Login</Link>
               </span>
             </div>
           </div>

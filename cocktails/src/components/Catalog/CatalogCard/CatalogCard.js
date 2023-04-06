@@ -1,4 +1,5 @@
 import './CatalogCard.css'
+import {Link} from 'react-router-dom'
 
 const CatalogCard = ()=>{
     return (
@@ -13,9 +14,9 @@ const CatalogCard = ()=>{
           <p className="product-price">
               Old Fashioned{" "}
           </p>
-          <a href="cart.html" className="cart-btn">
+          <Link to="/catalog/details" className="cart-btn">
             <i className="fas fa-shopping-cart"></i> Details
-          </a>
+          </Link>
         </div>
       </div>
     );

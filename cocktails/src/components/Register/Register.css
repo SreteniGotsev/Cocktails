@@ -42,7 +42,8 @@
  }
 .form a{
   font-size: 16px;
-  color: #009579;
+  color: #F28123;
+  cursor: pointer;
   text-decoration: none;
 }
 .form a:hover{
@@ -50,7 +51,7 @@
 }
 
 .form input.button:hover{
-  background: #006653;
+  background: darkorange;
 }
 .signup{
   font-size: 17px;

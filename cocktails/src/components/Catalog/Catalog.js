@@ -2,6 +2,7 @@
 import './Catalog.css'
 import CatalogCard from './CatalogCard/CatalogCard';
 
+
 const Catalog = ()=>{
     return(
       

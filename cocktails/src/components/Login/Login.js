@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 const Login = () =>{
@@ -15,7 +16,7 @@ const Login = () =>{
             <div className="signup">
               <span className="signup">
                 Don't have an account?
-                <label for="check">Signup</label>
+                <Link to="/register">Signup</Link>
               </span>
             </div>
           </div>

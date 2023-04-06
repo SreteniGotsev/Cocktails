@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css'
 const Hero = ()=>{
     return (
@@ -10,12 +11,12 @@ const Hero = ()=>{
                   <p className="subtitle">Lift your spirits!</p>
                   <h1>Life is too short for a bad drink!</h1>
                   <div className="hero-btns">
-                    <a href="shop.html" className="boxed-btn">
+                    <Link to="/catalog" className="boxed-btn">
                       Cocktail list
-                    </a>
-                    <a href="contact.html" className="bordered-btn">
-                      Blog
-                    </a>
+                    </Link>
+                    <Link to="/about" className="bordered-btn">
+                      About
+                    </Link>
                   </div>
                 </div>
               </div>
