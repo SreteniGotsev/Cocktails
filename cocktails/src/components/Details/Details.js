@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import './Details.css'
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import * as cocktailService from '../../services/cocktailsService'
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -14,15 +14,12 @@ const Details = ()=>{
 
   useEffect(()=>{
     
-    let cocktailResult =cocktailService.getOne(id)
+    cocktailService.getOne(id)
     .then(res=>{
       setCocktail(res)
-      console.log(cocktailResult)})
+  })
   },[id])
   
-  console.log(`cocktailId = ${id}`)
-  console.log(user)
-  console.log(cocktail)
 
 const deleteHandler = (e)=>{
    e.preventDefault()
@@ -30,26 +27,22 @@ const deleteHandler = (e)=>{
    navigate("/catalog");
 }
 
-const editHandler = (e)=>{
-   e.preventDefault()
 
-}
 
 const ownerButtons = (
   <>
-    <button className="cart-btn" onClick={editHandler}>
-       Edit
-    </button>
-    <button className="cart-btn" onClick={deleteHandler}>
+  
+    <Link to={`/edit/${cocktail._id}`}  key={cocktail._id} cocktail={cocktail} className="cart-btn">Edit</Link>
+    <a className="cart-btn" onClick={deleteHandler}>
      Delete
-    </button>
+    </a>
   </>
 );
 
 const userButtons = (
-  <button className="cart-btn">
+  <a className="cart-btn">
      Like
-  </button>
+  </a>
 );
     return (
       <div className="container-details text-center">

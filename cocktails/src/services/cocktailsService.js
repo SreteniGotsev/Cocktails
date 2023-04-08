@@ -45,6 +45,26 @@ export const create = async(cocktail,token)=>{
 }
 
 
+export const edit = async(id,cocktail,token)=>{
+    let res = await  fetch(`http://localhost:3030/data/cocktails/${id}`,{
+       method: 'Put',
+       headers: { 
+           'content-type': 'application/json',
+           'X-Authorization': token
+           },
+       body: JSON.stringify({...cocktail}) 
+    });
+      
+    let jsonResult = await res.json();
+    
+    if(res.ok){
+        return jsonResult
+    }else{
+        throw jsonResult
+    }
+}
+
+
 export const remove = async(cocktailId,token)=>{
     let res = await  fetch(`http://localhost:3030/data/cocktails/${cocktailId}`,{
     method:'Delete',

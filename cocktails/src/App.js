@@ -52,8 +52,8 @@ function App() {
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/register" element={<Register />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/edit" element={<Edit />} />
-          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/catalog/" element={<Catalog />} />
           <Route path="/catalog/details/:id" element={<Details />} />
           <Route path="/about" element={<About />} />
           <Route path="/sponsors" element={<Sponsors />} />
