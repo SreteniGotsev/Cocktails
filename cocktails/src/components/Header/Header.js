@@ -1,6 +1,7 @@
 import './Header.css'
 import {Link } from 'react-router-dom'
-
+import { AuthContext } from '../../contexts/AuthContext';
+import { useContext } from 'react';
 
 const registerOptions = (
   <>
@@ -18,13 +19,16 @@ const logOutOptions = (
       <Link to="/create">Create</Link>
     </li>
     <li>
-      <Link to="contact.html">Log Out</Link>
+      <Link to="/logout">Log Out</Link>
     </li>
   </>
 );
 
 
 const Header = () => {
+
+  const {user} =useContext(AuthContext)
+
     return(
         <div className="top-header-area" id="sticker">
         <div className="container">
@@ -49,7 +53,7 @@ const Header = () => {
                     <li>
                       <Link to="/catalog">Catalog</Link>
                     </li>
-                   { true?registerOptions:logOutOptions
+                   { user.email?logOutOptions:registerOptions
 
                    }
                   </ul>

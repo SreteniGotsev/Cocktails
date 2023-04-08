@@ -1,17 +1,45 @@
 import { Link } from 'react-router-dom';
 import './Login.css'
+import { useNavigate } from 'react-router-dom';
+import * as authService from '../../services/authService';
+import { AuthContext } from '../../contexts/AuthContext';
+import { useContext } from 'react';
+
 
 const Login = () =>{
+  
+    const navigate = useNavigate();
+    const {login}=useContext(AuthContext)
+
+    const onLoginHandler = (e)=>{
+      e.preventDefault();
+
+      let formData = new FormData(e.currentTarget);
+
+      let email = formData.get("email");
+      let password = formData.get("password");
+
+      authService.login(email,password)
+          .then((authData)=>{
+            login(authData)
+            console.log(authData)
+            navigate('/')
+          })
+          .catch(err=>{
+            navigate('/Error')
+          })
+    } 
+
     return (
       <div className="container-register">
         <div className="container">
           <div className="form">
             <header>Login</header>
-            <form action="#">
-              <input type="text" placeholder="Enter your email" />
-              <input type="password" placeholder="Enter your password" />
-              <a href="#">Forgot password?</a>
-              <input type="button" className="button" value="Login" />
+            <form onSubmit={onLoginHandler}>
+              <input name='email' type="text" placeholder="Enter your email" />
+              <input name='password' type="password" placeholder="Enter your password" />
+              <Link to="/">Forgot password?</Link>
+              <input type="submit" className="button" value="Login" />
             </form>
             <div className="signup">
               <span className="signup">

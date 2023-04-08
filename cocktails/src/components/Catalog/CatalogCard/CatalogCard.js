@@ -1,22 +1,24 @@
+import { useContext } from 'react';
 import './CatalogCard.css'
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../../../contexts/AuthContext';
 
-const CatalogCard = ()=>{
+const CatalogCard = (x)=>{
+ const {user } = useContext(AuthContext)
+
     return (
       <div className="col-lg-4 col-md-6 text-center">
         <div className="single-product-item">
-          <div className="product-image">
-            <a href="single-product.html">
-              <img src="../../assets/img/products/product-img-1.jpg" alt="" />
-            </a>
+          <div className="product-image">  
+              <img src={x.cocktail.image} alt="" />
           </div>
-          <h3>Stirred</h3>
+          <h3>{x.cocktail.category}</h3>
           <p className="product-price">
-              Old Fashioned{" "}
+              {x.cocktail.name}
           </p>
-          <Link to="/catalog/details" className="cart-btn">
-            <i className="fas fa-shopping-cart"></i> Details
-          </Link>
+          {user._id?<Link to={`/catalog/details/${x.cocktail._id}`} className="cart-btn">
+             Details
+          </Link>:"Login for details"}
         </div>
       </div>
     );

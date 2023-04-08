@@ -33,7 +33,7 @@ const Error = () =>{
           </div>
         </div>
 
-          <div className="container">
+        {/* <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="logo-carousel-inner">
@@ -55,7 +55,7 @@ const Error = () =>{
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
       </div>
     );
 

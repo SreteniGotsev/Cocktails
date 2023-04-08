@@ -1,13 +1,43 @@
+import { useContext } from 'react';
 import './Create.css'
+import * as cocktailService from '../../services/cocktailsService'
+import { AuthContext } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 const Create = () =>{
+  const {user} = useContext(AuthContext)
+  const navigate = useNavigate()
+  
+
+   const onCockteilCreate=(e)=>{
+      e.preventDefault();
+      console.log('clicked')
+      let formData = new FormData(e.currentTarget);
+      
+      let name = formData.get('name')
+      let category = formData.get('category')
+      let recipe = formData.get('recipe')
+      let image = formData.get('image')
+
+      cocktailService.create({
+        name,
+        category,
+        recipe,
+        image
+      },user.accessToken)
+      .then(()=>{navigate('/catalog')})
+      .catch(err=>{navigate('/error')})
+     
+   }
+
     return (
       <div className="container-create">
         <div className="container">
           <div className="form">
             <header>Create</header>
-            <form>
-              <input type="text" name="cocktail" placeholder="Cocktail Name" />
+            <form onSubmit={onCockteilCreate}>
+              <input type="text" name="name" placeholder="Cocktail Name" />
               <select className="input" name="category">
                 <option value="stirred">Stirred</option>
                 <option value="sour">Sour</option>
@@ -23,7 +53,7 @@ const Create = () =>{
                 name="recipe"
               ></textarea>
               <input name="image" type="text" placeholder="ImageURL" />
-              <input type="button" className="button" value="Create" />
+              <input type="submit" className="button" value="Create" />
             </form>
           </div>
         </div>

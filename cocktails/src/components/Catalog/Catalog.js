@@ -1,9 +1,25 @@
 
+import { useEffect, useState } from 'react';
 import './Catalog.css'
 import CatalogCard from './CatalogCard/CatalogCard';
+import * as cocktailService from '../../services/cocktailsService'
 
 
 const Catalog = ()=>{
+  const [cocktail, setCocktails] = useState([]);
+     //const [loading, setLoading] = useState(false);
+
+     useEffect(()=>{
+        //setLoading(true);
+
+        cocktailService.getAll()
+        .then(result=> {
+        setCocktails(result);
+        // setLoading(false);
+        })
+      
+     },[])
+
     return(
       
         <div className="product-section mt-150 mb-150">
@@ -25,7 +41,7 @@ const Catalog = ()=>{
 
           <div className="row">
 
-          <CatalogCard/>
+          {cocktail.map(x=><CatalogCard key={x._id} cocktail={x}/>)}
 
           </div>
         </div>
