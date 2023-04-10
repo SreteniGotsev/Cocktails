@@ -2,7 +2,6 @@ import Catalog from "./components/Catalog/Catalog";
 import Details from "./components/Details/Details";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Sponsors from "./components/Sponsors/Sponsors";
 import Error from "./components/Error/Error";
 import Login from "./components/Login/Login";
 import Logout from "./components/Logout/Logout";
@@ -48,6 +47,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/*" element={<Hero />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/register" element={<Register />} />
@@ -55,8 +55,6 @@ function App() {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/catalog/" element={<Catalog />} />
           <Route path="/catalog/details/:id" element={<Details />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/error" element={<Error />} />
         </Routes>
 

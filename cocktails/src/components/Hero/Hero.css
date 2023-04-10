@@ -12,12 +12,9 @@
   
   .hero-text-tablecell {
     display: table-cell;
-  }
-
-  .hero-text-tablecell {
     padding-top: 25px;
-    padding-left: 15px;
-}
+    padding-left: 15px; 
+  }
   
   .hero-area {
     height: 100%;

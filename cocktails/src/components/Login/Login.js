@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Login.css'
 import { useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
@@ -26,7 +26,7 @@ const Login = () =>{
             navigate('/')
           })
           .catch(err=>{
-            navigate('/Error')
+            navigate('/error')
           })
     } 
 

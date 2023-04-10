@@ -5,7 +5,7 @@ const Hero = ()=>{
       <div className="hero-area hero-bg">
         <div className="container">
           <div className="row">
-            <div className="col-lg-9 offset-lg-2 text-center">
+            <div className="col-lg-9 offset-lg-1 text-center">
               <div className="hero-text">
                 <div className="hero-text-tablecell">
                   <p className="subtitle">Lift your spirits!</p>
@@ -17,7 +17,7 @@ const Hero = ()=>{
                     <Link to="/about" className="bordered-btn">
                       About
                     </Link>
-                  </div>
+                  </div> 
                 </div>
               </div>
             </div>

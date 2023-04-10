@@ -1,13 +1,14 @@
-const Error = () =>{
+import './Error.css'
+const Error = (err) =>{
 
     return (
       <div>
         <div className="breadcrumb-section breadcrumb-bg">
           <div className="container">
             <div className="row">
-              <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="col-lg-8 offset-lg-1 text-center">
                 <div className="breadcrumb-text">
-                  <p>Fresh adn Organic</p>
+                  <p>Never drink and drive!</p>
                   <h1>404 - Not Found</h1>
                 </div>
               </div>
@@ -18,7 +19,7 @@ const Error = () =>{
           <div className="full-height-tablecell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-8 offset-lg-2 text-center">
+                <div className="col-lg-8  text-center">
                   <div className="error-text">
                     <i className="far fa-sad-cry"></i>
                     <h1>Oops! Not Found.</h1>

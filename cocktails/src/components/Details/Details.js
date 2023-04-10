@@ -48,9 +48,7 @@ const userButtons = (
       <div className="container-details text-center">
         <div className="single-product-item">
           <div className="product-image">
-            <a href="single-product.html">
               <img src={`${cocktail.image}`} alt="" />
-            </a>
           </div>
           <h3>{cocktail.name}</h3>
           <p className="product-price">

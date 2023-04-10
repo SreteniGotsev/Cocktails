@@ -1,44 +1,48 @@
-
-.testimonail-section{
-  margin-top: 20rem;
+.about-section{
+  
+  background-image: url(../../../public/assets/img/bar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 5rem;
+  
 }
 
-.client-avater {
-  margin-bottom: 20px;
+.about-article{
+  margin: 10rem 5rem;
 }
 
-.client-meta h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.client-meta h3 span {
-  display: block;
-  font-size: 70%;
-  margin-top: 10px;
-  color: #051922;
-  font-weight: 600;
-  opacity: 0.5;
-}
-
-p.testimonial-body {
-  font-size: 17px;
+p.about-article-body {
+  font-size: 2rem;
   font-style: italic;
   width: 700px;
   margin: 0 auto;
   line-height: 1.8;
-  color: #999999;
+  color: orange;
   margin-top: 20px;
 }
 
-.last-icon {
-  margin-top: 20px;
-  font-size: 25px;
-  opacity: 0.3;
+.about-article-pictur {
+  margin-bottom: 20px;
 }
 
-.client-avater img {
-  max-width: 100px;
-  border-radius: 50%;
+.about-article-pictur img {
+  width: 50rem;
+  border-radius: 30%;
   margin: 0 auto;
 }
+
+.about-article-meta{
+ backdrop-filter: invert(60%) ;
+ padding: 1rem;
+}
+
+.about-article-meta h3{
+  display: block;
+  font-size: 3rem;
+  margin-top: 10px;
+  color: orange;
+  font-weight: 900;
+}
+
+
