@@ -111,7 +111,7 @@ nav.main-menu ul li.current-list-item > a {
 }
 
 nav.main-menu li:hover > a {
-  color:#fff;
+  color:#FDA54B;
 }
 
 nav.main-menu li a {
@@ -127,7 +127,7 @@ nav.main-menu li a {
 }
 
 .top-header-area .header-icons a:hover {
-  color: #fff;
+  color: FDA54B;
 }
 
 .sticky-wrapper {

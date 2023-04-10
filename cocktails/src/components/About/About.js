@@ -1,13 +1,12 @@
 import './About.css'
 const About = ()=>{
     return(
-        
-     
         <div className="testimonail-section mt-150 mb-150">
         <div className="container">
           <div className="row">
             <div className="col-lg-10 offset-lg-1 text-center">
               <div className="testimonial-sliders">
+
                 <div className="single-testimonial-slider">
                   <div className="client-avater">
                     <img src="assets/img/avaters/avatar1.png" alt="" />
@@ -27,6 +26,7 @@ const About = ()=>{
                     </div>
                   </div>
                 </div>
+                
                 <div className="single-testimonial-slider">
                   <div className="client-avater">
                     <img src="assets/img/avaters/avatar2.png" alt="" />

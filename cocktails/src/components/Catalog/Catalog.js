@@ -40,9 +40,11 @@ const Catalog = ()=>{
           </div>
 
           <div className="row">
-
-          {cocktail.map(x=><CatalogCard key={x._id} cocktail={x}/>)}
-
+         {cocktail.length >0
+         
+          ? cocktail.map(x=><CatalogCard key={x._id} cocktail={x}/>)
+          : <h3>No cocktails in the databse, yet! Feel free to create one!</h3>
+         }
           </div>
         </div>
       </div>

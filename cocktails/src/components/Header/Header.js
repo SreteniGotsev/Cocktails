@@ -44,7 +44,7 @@ const Header = () => {
 
                 <nav className="main-menu">
                   <ul>
-                    <li className="current-list-item">
+                    <li>
                       <Link to="/">Home</Link>
                     </li>
                     <li>

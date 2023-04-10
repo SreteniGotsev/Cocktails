@@ -47,7 +47,7 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/*" element={<Hero />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/register" element={<Register />} />
