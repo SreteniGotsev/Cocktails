@@ -12,31 +12,13 @@ import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import CopyRight from "./components/CopyRight/CopyRight";
 import { Route, Routes } from "react-router";
-import {AuthContext} from './contexts/AuthContext'
-import {useState } from "react";
-
+import {AuthProvider} from './contexts/AuthContext'
 
 function App() {
-  const [user, setUser] = useState({
-    _id: '',
-    email: '',
-    accessToken:''
-  }  )
-
-  const login = (authData) =>{
-    setUser(authData);
-  }
-
-  const logout = () =>{
-    setUser({
-      _id: '',
-      email: '',
-      accessToken:''
-    } );
-  }
+  
 
   return (
-    <AuthContext.Provider value={{user,login,logout}}>
+    <AuthProvider>
       <div className="App">
         {/* <div className="loader">
         <div className="loader-inner">
@@ -61,7 +43,7 @@ function App() {
         <Footer />
         <CopyRight />
       </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 
