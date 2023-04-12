@@ -3,20 +3,24 @@ import { useEffect, useState } from 'react';
 import './Catalog.css'
 import CatalogCard from './CatalogCard/CatalogCard';
 import * as cocktailService from '../../services/cocktailsService'
+import { useNavigate } from 'react-router-dom';
 
 
 const Catalog = ()=>{
   const [cocktail, setCocktails] = useState([]);
      //const [loading, setLoading] = useState(false);
 
+     const navigate = useNavigate()
+
      useEffect(()=>{
         //setLoading(true);
 
         cocktailService.getAll()
         .then(result=> {
-        setCocktails(result);
+        setCocktails(result)
         // setLoading(false);
-        })
+      })
+      .catch(err=>{navigate('/error')})
       
      },[])
 

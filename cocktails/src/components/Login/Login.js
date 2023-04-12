@@ -26,7 +26,7 @@ const Login = () =>{
             navigate('/')
           })
           .catch(err=>{
-            navigate('/error')
+            navigate('/error',{state:err})
           })
     } 
 

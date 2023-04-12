@@ -9,7 +9,7 @@ export const  login = async(email, password)=>{
     });
       
     let jsonResult = await res.json();
-    
+
     if(res.ok){
         return jsonResult
     }else{

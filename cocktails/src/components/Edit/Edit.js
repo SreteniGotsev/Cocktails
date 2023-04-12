@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as cocktailService from '../../services/cocktailsService'
 import { AuthContext } from '../../contexts/AuthContext';
+import { isAuth } from '../../hoc/isAuth';
 
 const Edit = () =>{
   const{user} = useContext(AuthContext)  
@@ -16,6 +17,7 @@ const Edit = () =>{
     .then(res=>{
       setCocktail(res)
       console.log(cocktailResult)})
+      .catch(err=>{navigate('/error')})
   },[id])
 
   const editHandler = (e)=>{
@@ -70,4 +72,4 @@ const Edit = () =>{
 
 
  
-export default Edit;
+export default isAuth(Edit);

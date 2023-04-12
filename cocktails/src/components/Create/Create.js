@@ -3,6 +3,7 @@ import './Create.css'
 import * as cocktailService from '../../services/cocktailsService'
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { isAuth } from '../../hoc/isAuth';
 
 
 const Create = () =>{
@@ -63,4 +64,4 @@ const Create = () =>{
 
 
  
-export default Create;
+export default isAuth(Create);

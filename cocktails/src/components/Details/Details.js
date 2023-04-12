@@ -3,6 +3,7 @@ import './Details.css'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import * as cocktailService from '../../services/cocktailsService'
 import { AuthContext } from '../../contexts/AuthContext';
+import { isAuth } from '../../hoc/isAuth';
 
 const Details = ()=>{
   const{user} = useContext(AuthContext)  
@@ -18,6 +19,7 @@ const Details = ()=>{
     .then(res=>{
       setCocktail(res)
   })
+  .catch(err=>{navigate('/error')})
   },[id])
   
 
@@ -67,4 +69,4 @@ const userButtons = (
     );
 }
 
-export default Details;
+export default isAuth(Details);

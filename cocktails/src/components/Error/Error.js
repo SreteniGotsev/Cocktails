@@ -1,6 +1,7 @@
 import './Error.css'
 const Error = (err) =>{
 
+  console.log(err)
     return (
       <div>
         <div className="breadcrumb-section breadcrumb-bg">
@@ -9,7 +10,7 @@ const Error = (err) =>{
               <div className="col-lg-8 offset-lg-1 text-center">
                 <div className="breadcrumb-text">
                   <p>Never drink and drive!</p>
-                  <h1>404 - Not Found</h1>
+                  <h1>Something went wrong!</h1>
                 </div>
               </div>
             </div>
@@ -24,7 +25,7 @@ const Error = (err) =>{
                     <i className="far fa-sad-cry"></i>
                     <h1>Oops! Not Found.</h1>
                     <p>The page you requested for is not found.</p>
-                    <a href="index.html" className="boxed-btn">
+                    <a href="/" className="boxed-btn">
                       Back to Home
                     </a>
                   </div>
