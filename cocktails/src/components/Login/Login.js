@@ -22,11 +22,10 @@ const Login = () =>{
       authService.login(email,password)
           .then((authData)=>{
             login(authData)
-            console.log(authData)
             navigate('/')
           })
-          .catch(err=>{
-            navigate('/error',{state:err})
+          .catch(()=>{
+            window.alert('Wrong email or password')
           })
     } 
 
