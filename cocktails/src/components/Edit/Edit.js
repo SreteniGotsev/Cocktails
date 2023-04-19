@@ -49,6 +49,8 @@ const Edit = () =>{
         console.log(err);
         navigate('/error')})
   }
+
+  
   const onChangeHandler =(e)=>{
     if(e){
      const ob = Object.assign({},validate.cocktail(e.target.name,e.target.value))

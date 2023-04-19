@@ -20,7 +20,7 @@ const Catalog = ()=>{
         setCocktails(result)
         // setLoading(false);
       })
-      .catch(err=>{navigate('/error')})
+      .catch(()=>{navigate('/error')})
       
      },[])
 

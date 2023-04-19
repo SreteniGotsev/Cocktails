@@ -47,12 +47,12 @@ export const create = async(cocktail,token)=>{
 
 export const edit = async(id,cocktail,token)=>{
     let res = await  fetch(`http://localhost:3030/data/cocktails/${id}`,{
-       method: 'Put',
-       headers: { 
-           'content-type': 'application/json',
-           'X-Authorization': token
-           },
-       body: JSON.stringify({...cocktail}) 
+        method: 'Put',
+        headers: { 
+            'content-type': 'application/json',
+            'X-Authorization': token
+            },
+        body: JSON.stringify({...cocktail}) 
     });
       
     let jsonResult = await res.json();
