@@ -30,6 +30,8 @@ const Register = () =>{
 
       if(password !== repeatPassword){
         alert('The passwords should match!')
+      }else if(errObj.email.err||errObj.password.err||errObj.repeatPassword.err){
+        return
       }else{
 
         authService

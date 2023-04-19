@@ -37,7 +37,11 @@ const Edit = () =>{
       let recipe = formData.get('recipe')
       let image = formData.get('image')
 
-      console.log(user.accessToken)
+      if(errObj.name.err||errObj.recipe.err){
+        return
+      }
+
+
       cocktailService.edit(id,{
         name,
         category,

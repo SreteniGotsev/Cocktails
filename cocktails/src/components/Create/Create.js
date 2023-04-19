@@ -26,6 +26,10 @@ const Create = () =>{
       let recipe = formData.get('recipe')
       let image = formData.get('image')
 
+      if(errObj.name.err||errObj.recipe.err){
+        return
+      }
+
       cocktailService.create({
         name,
         category,
