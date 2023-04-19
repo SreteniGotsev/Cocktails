@@ -10,7 +10,7 @@ const CatalogCard = (x)=>{
       <div>
         <div className="single-product-item catalog-card">
           <div className="product-image">
-            <img src={x.cocktail.image} alt="" />
+            <img className="image" src={x.cocktail.image} alt="" />
           </div>
           <div className="product-info">
             <h3>{x.cocktail.category}</h3>
