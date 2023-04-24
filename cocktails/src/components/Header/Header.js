@@ -19,6 +19,9 @@ const logOutOptions = (
       <Link to="/create">Create</Link>
     </li>
     <li>
+      <Link to="/my-cocktails/">MyCocktails</Link>
+    </li>
+    <li>
       <Link to="/logout">Log Out</Link>
     </li>
   </>

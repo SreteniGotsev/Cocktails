@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import CopyRight from "./components/CopyRight/CopyRight";
 import { Route, Routes } from "react-router";
 import {AuthProvider} from './contexts/AuthContext'
+import MyCocktails from "./components/MyCocktails/MyCocktails";
 
 function App() {
   
@@ -36,7 +37,8 @@ function App() {
           <Route path="/create" element={<Create />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/catalog/" element={<Catalog />} />
-          <Route path="/catalog/details/:id" element={<Details />} />
+          <Route path="/my-cocktails/" element={<MyCocktails />} />
+          <Route path="/catalog/details/:id/" element={<Details />} />
           <Route path="/error" element={<Error />} />
         </Routes>
 

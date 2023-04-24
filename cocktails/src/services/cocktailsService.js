@@ -11,11 +11,25 @@ export const getAll = async()=>{
     }
 }
 
+export const getMine = async(id)=>{
+
+    const query = encodeURIComponent(`_ownerId="${id}"`)
+
+    let res = await  fetch(`http://localhost:3030/data/cocktails?where=${query}`);
+      
+    let jsonResult = await res.json();
+    let cocktails = Object.values(jsonResult)
+    if(res.ok){
+        return cocktails;
+    }else{
+        throw jsonResult
+    }
+}
 
 export const  getOne = async(_id)=>{
     let res = await  fetch(`http://localhost:3030/data/cocktails/${_id}`,{
     });
-      
+    
     let jsonResult = await res.json();
     console.log(jsonResult)
     if(res.ok){
